@@ -10,23 +10,32 @@
 
 <style>
 :root{
---gold:#f0c75e;
+--goldenOrange:#e39b2e;
+--deepGold:#c88719;
 --teal:#1aa6a3;
---soft-bg:#f4f7f5;
 --white:#ffffff;
 --text:#2f3e46;
 }
+
 *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+
 body{
 font-family:'Quicksand',sans-serif;
-background:var(--soft-bg);
 color:var(--text);
 line-height:1.8;
+background:
+linear-gradient(rgba(255,255,255,0.72),rgba(255,255,255,0.72)),
+url("background.jpeg");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 }
+
+/* NAV */
 nav{
 position:fixed;
 top:0;width:100%;
-background:rgba(255,255,255,.9);
+background:rgba(255,255,255,.92);
 backdrop-filter:blur(15px);
 padding:20px 50px;
 display:flex;
@@ -36,17 +45,18 @@ border-bottom:1px solid rgba(0,0,0,.05);
 }
 nav a{
 text-decoration:none;
-color:var(--text);
+color:var(--deepGold);
 margin:0 20px;
-font-weight:500;
+font-weight:600;
 text-transform:uppercase;
 font-size:.85rem;
 letter-spacing:1.5px;
 }
+
+/* HEADER */
 header{
 padding:160px 20px 80px;
 text-align:center;
-background:linear-gradient(to bottom,#fff,var(--soft-bg));
 border-bottom-left-radius:80px;
 border-bottom-right-radius:80px;
 }
@@ -54,47 +64,57 @@ border-bottom-right-radius:80px;
 width:320px;height:320px;
 border-radius:50%;
 object-fit:cover;
-border:10px solid var(--gold);
-box-shadow:0 30px 60px rgba(240,199,94,.35);
+border:10px solid var(--goldenOrange);
+box-shadow:0 30px 60px rgba(227,155,46,.35);
 margin-bottom:35px;
+background:#fff;
 }
 h1{
 font-size:4rem;
-color:var(--gold);
+color:var(--goldenOrange);
 margin-bottom:10px;
 }
 .subtitle{
 text-transform:uppercase;
 letter-spacing:4px;
-color:var(--teal);
-font-weight:600;
+color:var(--deepGold);
+font-weight:700;
 margin-bottom:25px;
 }
 .quote{
 font-family:'Playfair Display',serif;
 font-size:1.8rem;
 font-style:italic;
-color:#555;
+color:#6b5a2a;
 max-width:700px;
 margin:auto;
 }
+
+/* SECTIONS */
 .section{
 padding:80px 10%;
 max-width:1300px;
 margin:auto;
 }
 .glass-card{
-background:var(--white);
+background:rgba(255,255,255,0.94);
 padding:60px 40px;
 border-radius:50px;
-box-shadow:0 15px 55px rgba(0,0,0,.04);
+box-shadow:0 15px 55px rgba(0,0,0,.06);
 text-align:center;
 margin-bottom:50px;
 }
+.section h2{
+color:var(--goldenOrange);
+font-size:2.4rem;
+margin-bottom:25px;
+}
+
+/* BUTTON */
 .btn{
 display:inline-block;
 padding:18px 45px;
-background:var(--teal);
+background:var(--goldenOrange);
 color:#fff;
 text-decoration:none;
 border-radius:60px;
@@ -102,7 +122,9 @@ font-weight:700;
 transition:.3s;
 margin-top:25px;
 }
-.btn:hover{background:#148885;transform:translateY(-3px)}
+.btn:hover{background:var(--deepGold);transform:translateY(-3px)}
+
+/* SOCIAL */
 .social-links{
 display:flex;
 justify-content:center;
@@ -110,26 +132,31 @@ gap:40px;
 margin-top:40px;
 }
 .social-links a{
-color:var(--teal);
+color:var(--goldenOrange);
 font-size:3rem;
 transition:.3s;
 }
-.social-links a:hover{color:var(--gold);transform:translateY(-5px)}
+.social-links a:hover{color:var(--deepGold);transform:translateY(-5px)}
+
 .email{
 margin-top:25px;
 font-size:1.1rem;
 }
 .email a{
-color:var(--teal);
+color:var(--goldenOrange);
 text-decoration:none;
 font-weight:600;
 }
+
+/* FOOTER */
 footer{
 text-align:center;
 padding:80px;
-color:#bbb;
-border-top:1px solid rgba(0,0,0,.02);
+color:#6b5a2a;
+border-top:1px solid rgba(0,0,0,.05);
+background:rgba(255,255,255,0.9);
 }
+
 @media(max-width:768px){
 h1{font-size:2.8rem}
 .profile-img{width:260px;height:260px}
@@ -148,21 +175,21 @@ h1{font-size:2.8rem}
 </nav>
 
 <header>
-<img src="ajjay.jpeg" class="profile-img" alt="Ajjay S Pareehar">
+<img src="ajjay.jpeg" class="profile-img">
 <h1>Ajjay S Pareehar</h1>
 <p class="subtitle">Entrepreneur • Life Coach • Numerologist</p>
 <div class="quote">“Let yourself be your first love.”</div>
+<a href="https://razorpay.me/@ajjayspareehar" target="_blank" class="btn">
+Book Session / Pay Securely
+</a>
 </header>
 
 <section class="section" id="about">
 <div class="glass-card">
-<h2 style="color:var(--gold);font-size:2.5rem;margin-bottom:25px;">
-Conscious Self-Healing & Transformation
-</h2>
+<h2>Conscious Self-Healing & Transformation</h2>
 <p style="font-size:1.3rem;color:#444;">
 I help individuals heal emotionally, mentally, and energetically through self-healing practices,
 Law of Attraction principles, and practical manifestation techniques.
-My approach focuses on subconscious alignment so transformation happens naturally from within.
 </p>
 <a href="https://wa.me/919049101373" class="btn" target="_blank">
 Start Your Healing Journey
@@ -171,12 +198,8 @@ Start Your Healing Journey
 </section>
 
 <section class="section" id="shorts">
-<h2 style="text-align:center;color:var(--gold);font-size:2.2rem;">
-Transformation Shorts
-</h2>
-<p style="text-align:center;opacity:.6;">
-Daily insights on healing & manifestation
-</p>
+<h2 style="text-align:center;">Transformation Shorts</h2>
+<p style="text-align:center;opacity:.7;">Daily insights on healing & manifestation</p>
 <div style="text-align:center;">
 <a href="https://www.youtube.com/@ajjayspareehar/shorts" target="_blank" class="btn">
 ▶ View All YouTube Shorts
@@ -185,65 +208,47 @@ Daily insights on healing & manifestation
 </section>
 
 <section class="section" id="programs">
-<h2 style="text-align:center;color:var(--gold);font-size:2.2rem;margin-bottom:40px;">
-Programs
-</h2>
-
+<h2 style="text-align:center;">Programs</h2>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:35px;">
-
 <div class="glass-card">
-<i class="fas fa-lotus" style="font-size:3.8rem;color:var(--teal);margin-bottom:15px;"></i>
+<i class="fas fa-lotus" style="font-size:3.8rem;color:var(--goldenOrange);margin-bottom:15px;"></i>
 <h3>Healing to Manifestation</h3>
-<p>Heal emotional blocks, align your energy, and consciously manifest desired outcomes.</p>
-<span style="color:var(--gold);font-weight:700;letter-spacing:2px;">ENROLLING SOON</span>
+<p>Heal emotional blocks and consciously manifest desired outcomes.</p>
 </div>
-
 <div class="glass-card">
-<i class="fas fa-infinity" style="font-size:3.5rem;color:var(--teal);margin-bottom:15px;"></i>
+<i class="fas fa-infinity" style="font-size:3.5rem;color:var(--goldenOrange);margin-bottom:15px;"></i>
 <h3>Manifest to Transform</h3>
-<p>Advanced subconscious reprogramming for deep, lasting life transformation.</p>
-<span style="color:var(--gold);font-weight:700;letter-spacing:2px;">ENROLLING SOON</span>
+<p>Advanced subconscious reprogramming for lasting transformation.</p>
 </div>
-
 </div>
 </section>
 
+<!-- TESTIMONIALS RESTORED -->
 <section class="section" id="testimonials">
-<h2 style="text-align:center;color:var(--gold);font-size:2.2rem;margin-bottom:40px;">
-Real Stories • Real Transformation
-</h2>
+<h2 style="text-align:center;">Real Stories • Real Transformation</h2>
 
 <div class="glass-card">
 <p style="font-size:1.25rem;font-style:italic;">
-“The Name Number report gave me deep clarity about repeating life patterns.
-I understood my decisions better and felt more confident moving forward.”
+“The Name Number report gave me deep clarity about repeating life patterns and decision-making.”
 </p>
-<strong style="display:block;margin-top:15px;color:var(--teal);">
-— Harshal Joshie
-</strong>
-<span style="opacity:0.6;">Name Number & Numerology Guidance</span>
+<strong style="color:var(--deepGold);">— Harshal Joshie</strong><br>
+<span style="opacity:.7;">Name Number & Numerology Guidance</span>
 </div>
 
 <div class="glass-card">
 <p style="font-size:1.25rem;font-style:italic;">
-“The self-healing course and numerology guidance brought calm and balance into my personal life.
-I now respond with clarity instead of reacting emotionally.”
+“The self-healing course brought calm, emotional balance, and better relationships.”
 </p>
-<strong style="display:block;margin-top:15px;color:var(--teal);">
-— Rishi S Kothari
-</strong>
-<span style="opacity:0.6;">Self-Healing Course & Numerology Report</span>
+<strong style="color:var(--deepGold);">— Rishi S Kothari</strong><br>
+<span style="opacity:.7;">Self-Healing Course</span>
 </div>
 
 <div class="glass-card">
 <p style="font-size:1.25rem;font-style:italic;">
-“Law of Attraction practices helped improve my mental health and study focus.
-My anxiety reduced and my mindset became more positive and stable.”
+“Law of Attraction practices improved my mental health and study focus significantly.”
 </p>
-<strong style="display:block;margin-top:15px;color:var(--teal);">
-— Pooja
-</strong>
-<span style="opacity:0.6;">Law of Attraction & Mental Well-Being</span>
+<strong style="color:var(--deepGold);">— Pooja</strong><br>
+<span style="opacity:.7;">Law of Attraction Guidance</span>
 </div>
 </section>
 
@@ -253,7 +258,6 @@ My anxiety reduced and my mindset became more positive and stable.”
 <a href="https://www.instagram.com/ajjay_s_pareehar" target="_blank"><i class="fab fa-instagram"></i></a>
 <a href="https://wa.me/919049101373" target="_blank"><i class="fab fa-whatsapp"></i></a>
 </div>
-
 <div class="email">
 📧 <a href="mailto:ajjayspareehar1@gmail.com">ajjayspareehar1@gmail.com</a>
 </div>
